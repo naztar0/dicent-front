@@ -1,0 +1,67 @@
+.login-form {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.login-form label {
+  font-size: 14px;
+  padding: 10px 0 5px 0;
+}
+
+.login-form input {
+  border: 1px solid #aaaaaa;
+  border-radius: 6px;
+  padding: 5px 10px;
+  font-size: 15px;
+}
+
+.login-form input:focus {
+  outline: none;
+}
+
+.login-form button, .user-params button {
+  margin-top: 10px;
+  padding: 5px;
+  background-color: var(--bs-purple);
+  border: 1px solid var(--bs-indigo);
+  border-radius: 5px;
+  color: white;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.login-box {
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+  padding: 10px;
+  margin: auto;
+}
+
+.login-box form {
+  background-color: #f6f8fa;
+  border: 1px solid #ebedef;
+  border-radius: 5px;
+  margin-top: 15px;
+}
+
+.login-box .under-text {
+  text-align: center;
+  font-size: 14px;
+  color: #706c64;
+  font-weight: 500;
+}
+
+.login-box .title {
+  text-align: center;
+  font-size: 28px;
+}
+
+.pass-red {
+  border-color: #e15f5f !important;
+}
+
+.pass-green {
+  border-color: #4bb359 !important;
+}

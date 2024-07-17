@@ -1,0 +1,125 @@
+.button-link {
+  color: #706c64;
+  background: none;
+  border: none;
+  padding: 0;
+  text-decoration: underline;
+  font-size: 14px;
+}
+
+.round-btn {
+  align-self: center;
+  width: 36px;
+  height: 36px;
+  border: none;
+  background-color: var(--bs-white);
+  padding-top: 5px;
+  border-radius: 50%;
+  color: var(--bs-gray);
+  transition: all linear 0.1s;
+}
+
+.round-btn svg {
+  margin-top: -10px;
+}
+
+.round-btn:active {
+  background-color: var(--bs-gray-light);
+  color: #282c34;
+  transition: all linear 0.2s;
+}
+
+.round-btn:hover, .round-btn.no-bg.hover:hover {
+  background-color: var(--bs-gray-lighter);
+  color: #282c34;
+  transition: all linear 0.2s;
+}
+
+.round-btn.no-bg {
+  background: none;
+}
+
+.round-btn.no-bg:active {
+  background: none;
+  color: #282c34;
+  transition: all linear 0.2s;
+}
+
+.round-btn.no-bg:hover {
+  background: none;
+  color: #282c34;
+  transition: all linear 0.2s;
+}
+
+.round-btn a {
+  color: var(--bs-gray);
+  text-decoration: none;
+}
+
+.round-btn.primary {
+  color: $primary
+}
+
+.round-btn.primary:hover {
+  color: $primary-dark
+}
+
+.round-btn.danger {
+  color: $danger
+}
+
+.round-btn.danger:hover {
+  color: $red-600
+}
+
+button[_title]:after {
+  opacity: 0;
+  content: '';
+  transition: opacity linear 0.1s;
+}
+
+button[_title]:hover {
+  position: relative;
+}
+
+button[_title]:hover:after {
+  content: attr(_title);
+  padding: 5px 6px;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  z-index: 1;
+  opacity: 1;
+  color: var(--bs-white);
+  background-color: rgba(54, 60, 63, 0.75);
+  border-radius: 5px;
+  transition-delay: 0.5s;
+}
+
+button[_title]:focus:after {
+  opacity: 0;
+}
+
+button[type=submit]:hover {
+  transition: all 0.4s ease-out;
+}
+
+.link-button {
+  border: 1px solid var(--bs-gray-light);
+  border-radius: 99px;
+  background-color: var(--bs-white);
+  padding: 3px 0 0 6px;
+  text-decoration: none;
+  box-shadow: 0 2px 4px var(--bs-gray-light);
+  transition: all ease-out 0.5s;
+  color: var(--bs-primary);
+  cursor: pointer;
+  user-select: none;
+  width: 36px;
+  height: 36px;
+}
+
+.link-button:hover {
+  background-color: var(--bs-gray-lighter);
+  transition: all ease-out 0.5s;
+}

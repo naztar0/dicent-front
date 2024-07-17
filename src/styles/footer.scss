@@ -1,0 +1,25 @@
+#footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 30px;
+  background-color: #e6e6e6;
+  border-top: 1px solid #cccccc;
+  padding: 20px 15%;
+  color: #777777;
+  font-size: 12px;
+}
+#footer a {
+  text-decoration: none;
+  color: #777777;
+}
+#footer .right-box {
+  width: 30%;
+  max-width: 250px;
+}
+#footer .links {
+  color: #333333;
+  font-weight: 500;
+  margin-bottom: 3px;
+  font-size: 16px;
+}

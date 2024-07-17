@@ -1,0 +1,58 @@
+image: docker:20.10.17
+
+services:
+  - name: docker:20.10.17-dind
+    alias: docker
+  - mysql:latest
+
+stages:
+  - build
+  - release
+
+variables:
+  DOCKER_TLS_CERTDIR: ''
+  DOCKER_HOST: tcp://docker:2375/
+  DOCKER_DRIVER: overlay2
+
+cache:
+  key: $CI_COMMIT_REF_SLUG
+  paths:
+    - node_modules/
+  policy: pull-push
+
+.load_images: &load_images
+  - docker load -i build.tar || true
+  - docker load -i pull.tar || true
+
+before_script:
+  - cp .env.example .env
+
+Build image:
+  stage: build
+  tags:
+    - docker
+  script:
+    - docker build -t dicent-front -f ./docker/Dockerfile .
+    - docker save -o build.tar dicent-front
+  needs: [ ]
+  artifacts:
+    paths:
+      - build.tar
+
+Release image:
+  stage: release
+  when: on_success
+  image:
+    name: amazon/aws-cli:2.7.3
+    entrypoint: [ "" ]
+  tags:
+    - docker
+  script:
+    - amazon-linux-extras install docker
+    - *load_images
+    - aws ecr get-login-password --region $AWS_DEFAULT_REGION | docker login --username AWS --password-stdin $AWS_ECR_REGISTRY
+    - docker tag dicent-front:latest $AWS_ECR_REGISTRY/dicent-front:latest
+    - docker push $AWS_ECR_REGISTRY/dicent-front:latest
+  needs:
+    - job: Build image
+      artifacts: true

@@ -1,0 +1,134 @@
+.drop-area {
+  border: 2px dashed $gray-light;
+  border-radius: 20px;
+  width: 100%;
+  font-family: sans-serif;
+  margin: 40px auto;
+  padding: 50px;
+  text-align: center;
+  font-size: 18px;
+  color: $gray-500;
+  user-select: none;
+}
+
+input[type=file] {
+  width: fit-content !important;
+  min-height: fit-content !important;
+  margin: auto;
+}
+
+audio {
+  width: 100%;
+  height: 30px;
+  margin-left: 5px;
+}
+
+span.title {
+  font-size: 26px;
+  font-weight: 600;
+}
+
+input.props {
+  width: fit-content;
+  border: none;
+}
+
+input.title {
+  font-size: 24px;
+  font-weight: 600;
+  width: 50%;
+}
+
+input.speaker {
+  font-size: 20px;
+  font-weight: 600;
+  margin-left: 5px;
+}
+
+textarea.content-text {
+  font-size: 14px;
+  border: none;
+  resize: vertical;
+}
+
+select {
+  width: fit-content;
+  border: none;
+}
+
+.create-project input, .create-project select, .edit-user input {
+  width: 100%;
+  min-height: 48px;
+  border: 1px solid $gray-light;
+  outline: none;
+  resize: none;
+  border-radius: 6px;
+  padding: 5px 10px;
+  font-size: 15px;
+}
+
+.create-project label, .edit-user label {
+  color: #4f5666;
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+
+.create-project button[type=submit], .edit-user button[type=submit] {
+  margin-top: 15px;
+  height: 35px;
+  width: 100%;
+  border: none;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 5px;
+  outline: none;
+  transition: all 0.4s ease-out;
+}
+
+.create-project button[type=submit]:hover, .edit-user button[type=submit] {
+  transition: all 0.4s ease-out;
+}
+
+$transcribe-bg: #dbd8ef;
+
+.transcribe {
+  display: flex;
+  flex-direction: column;
+  background: $transcribe-bg;
+  border-radius: 15px 15px 15px 0;
+  padding: 10px;
+  width: calc(100% - 50px);
+}
+
+.transcribe input, .transcribe textarea, .transcribe input:focus, .transcribe textarea:focus {
+  border: none;
+  background: transparent;
+  outline: none;
+}
+
+.transcribe textarea::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.transcribe textarea::-webkit-scrollbar-thumb {
+  background: $gray-white;
+  border: 4px $transcribe-bg solid;
+  cursor: all-scroll;
+}
+
+.transcribe textarea::-webkit-resizer {
+  background: $transcribe-bg;
+}
+
+.msg-corner {
+  background: $transcribe-bg;
+  width: 10px;
+}
+
+.msg-corner div {
+  height: 100%;
+  background-color: $white;
+  border-radius: 0 0 10px 0;
+}

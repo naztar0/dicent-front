@@ -1,0 +1,11 @@
+export const SHOW_LOADER = 0x01
+export const FETCH_PROJECTS = 0x02
+export const FETCH_PROJECT = 0x03
+export const FETCH_TRANSCRIBES = 0x04
+export const FETCH_USERS = 0x05
+export const FETCH_USER = 0x06
+export const FETCH_GROUPS = 0x07
+export const LOGIN = 0x08
+export const FETCH_ME = 0x09
+export const REGISTER = 0x0a
+export const HIDE_LOADER = 0x0b

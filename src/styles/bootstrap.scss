@@ -1,0 +1,17 @@
+@import "node_modules/bootstrap/scss/functions";
+@import "node_modules/bootstrap/scss/variables";
+@import "node_modules/bootstrap/scss/mixins";
+
+$gray-white: #fafafa;
+$gray-lighter: #edf0f2;
+$gray-light: #c2c7cc;
+$gray: #585f66;
+$gray-darker: #212529;
+$purple-lighter: #fbfaff;
+$purple-light: #cfcae6;
+$purple-dark: #492b80;
+$primary-lighter: $purple-lighter;
+$primary-light: $purple-light;
+$primary-dark: $purple-dark;
+$primary: $purple;
+@import "node_modules/bootstrap/scss/bootstrap";

@@ -1,0 +1,108 @@
+.navbar {
+  height: 50px;
+  padding-left: 250px;
+  padding-right: 250px;
+  background-color: #fafafb;
+  box-shadow: 0 0 10px rgba(190, 190, 190, 1);
+  z-index: 10;
+  justify-content: space-between;
+}
+
+#nav-menu {
+  width: 30px;
+  padding: 0;
+  margin-right: 8px;
+  border: none;
+  background: none;
+}
+
+.nav-item {
+  margin-left: 8px;
+}
+
+.nav-item .nav-link {
+  color: #282c34;
+  font-family: "Helvetica", sans-serif;
+  font-weight: bold;
+}
+
+.nav-search {
+  width: 45%;
+  margin-left: 15px;
+  margin-right: 10px;
+}
+
+.nav-search {
+  width: 28%;
+  margin-left: 15px;
+  margin-right: 10px;
+}
+
+.nav-search input {
+  width: 100%;
+  border: 1px solid $gray-light;
+  border-radius: 99px;
+  padding-left: 24px;
+}
+
+.nav-search input:focus {
+  outline: none;
+}
+
+.nav-search input::placeholder {
+  padding-left: 2px;
+}
+
+.nav-search > div > div:nth-child(3) {
+  border-radius: 99px;
+}
+
+.nav-search a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.nav-tabs {
+  display: flex;
+  flex-direction: row;
+}
+
+.nav-profile-box {
+  display: flex;
+  flex-direction: row;
+}
+
+.nav-profile-text {
+  align-self: center;
+  margin-left: 5px;
+  color: #282c34;
+  font-family: "Helvetica", sans-serif;
+}
+
+#nav-search-icon {
+  margin-bottom: 2px;
+  color: $gray;
+  margin-left: calc(-100% + 2px);
+  font-size: 22px;
+}
+
+.avatar-username {
+  font-weight: 500;
+  line-height: 0;
+  color: #fff;
+  user-select: none;
+}
+
+@media (max-width: 1695px) {
+  .navbar {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+}
+
+@media (max-width: 1415px) {
+  .navbar {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}

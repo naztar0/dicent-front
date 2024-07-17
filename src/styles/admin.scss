@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback");
+@import url("https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css");
+@import "/node_modules/admin-lte/plugins/fontawesome-free/css/all.min.css";
+@import "/node_modules/admin-lte/plugins/icheck-bootstrap/icheck-bootstrap.min.css";
+@import "/node_modules/admin-lte/plugins/jqvmap/jqvmap.min.css";
+@import "/node_modules/admin-lte/dist/css/adminlte.min.css";
+@import "/node_modules/admin-lte/plugins/overlayScrollbars/css/OverlayScrollbars.min.css";
+@import "/node_modules/admin-lte/plugins/daterangepicker/daterangepicker.css";
+@import "/node_modules/admin-lte/plugins/summernote/summernote-bs4.min.css";
+
+.wrapper {
+  margin-top: -15px;
+}
+
+.main-sidebar {
+  height: calc(100vh - 55px) !important;
+}
+
+.actions {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
